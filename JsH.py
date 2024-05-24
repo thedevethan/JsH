@@ -2,7 +2,6 @@
 
 
 from tkinter import font
-from numpy import spacing
 import pyperclip # Pour ajouter des éléments au presse papier
 
 
@@ -56,11 +55,6 @@ font_btn_prog = customtkinter.CTkFont(family= "Helvetica", size= 14)
 font_label_prog = customtkinter.CTkFont(family= "Helvetica", size= 19)
 
 font_label_advice = customtkinter.CTkFont(family= "Helvetica", size= 19)
-
-
-
-
-
 
 
 app._state_before_windows_set_titlebar_color = 'zoomed'   # Pour mettre le fenêtre en fullscreen
@@ -650,22 +644,22 @@ def good_advices():
     list_advice = [
         "Concentre toi en Algorithmique, c'est le pilier de la programmation !",
         "Commence par apprendre des langages de programmations pas trop chargés comme python, html et css.",
-        "Fonctionne par projets, savoir écrire if en python ne fais pas de toi un développeur. Pour chaque langage que tu vas apprendre, utilise le de manière concrète dans un projet.",           
+        "Fonctionne par projets. Savoir écrire if en python ne fais pas de toi un développeur. Pour chaque langage que tu vas apprendre, utilise le de manière concrète dans un projet.",           
         "Tu fais de la programmation pour toi et toi seul, ce n'est pas une compétition.",
-        "Progresser en programmation et en informatique en général demande beaucoup de patience et énormément de temps, prend ton temps pour bien apprendre ce n'est pas la course.",
+        "Progresser en programmation et en informatique en général demande beaucoup de patience et énormément de temps. Prend ton temps pour bien apprendre, ce n'est pas la course.",
         "Reste calme et patient quand tu rencontres des bugs et des problèmes lors de tes projets. C'est dans le calme qu'on trouve des solutions.",
         "Ne te complexe pas de trouver des manières de faire différentes de celles de autres, tu es unique et c'est ce qui fera de toi un développeur hors pairs.",
-        "Soit extrêment fier de ton de travail, n'hésite jamais à l'afficher. Même si c'est un programme qui affiche juste <<Hello World>>",
-        "N'hésite pas à partager ton travail avec d'autres développeurs et même avec les non développeurs. A quoi ça sert de créer tout ça si personne sait que tu le fait?",
-        "Recherche toujours un retour utilisateur  sur tes projets de la part des autres.",
-        "Marche avec des gens qui sont aussi voir plus performants que toi, laisse ceux qui veulent s'amuser à ne rien faire dans leur coin.",
+        "Soit extrêment fier de ton de travail, n'hésite jamais à l'afficher. Même si c'est un programme qui affiche juste <<Hello World>>.",
+        "N'hésite pas à partager ton travail avec d'autres développeurs, voir même avec les non développeurs. A quoi cela sert-il de créer tout cela si personne ne sait que tu le fait?",
+        "Recherche toujours un retour utilisateur  sur tes projets, de la part des autres.",
+        "Marche avec des gens qui, sont aussi, voir plus performants que toi, laisse ceux qui ne veulent pas travailler dans leur coin.",
         "N'hésite pas à demander de l'aide.",
-        "Et par dessus tout, amuse toi et fait des trucs fun c'est le plus important :)",
+        "Par dessus tout, amuse toi et fait des trucs fun c'est le plus important :)",
         "Voici les plateformes que je peux te recommander pour apprendre la programmation:",
         ]
     
     #Pour l'en tête
-    label_advice1 = customtkinter.CTkLabel(framescroll, text="Voici les conseils que je peux te donner en matière de programmation :", font = font_label_advice)
+    label_advice1 = customtkinter.CTkLabel(framescroll, text="Voici les conseils que je peux te donner en matière de programmation !", font = font_label_advice)
     label_advice1.pack(pady=(10,15), padx=(margin_advice), anchor="nw")
     
     #Pour le body (les conseils)
@@ -677,11 +671,27 @@ def good_advices():
     #Les liens des plateformes pour apprendre la programmation
     list_site = ["https://openclassrooms.com/fr/", "https://www.udemy.com/", "https://www.w3schools.com/", "https://www.alphorm.com/", "https://em-coder.netlify.app/"]
     
-    for site in list_site:
-        
-        label_advice3 = customtkinter.CTkLabel(framescroll, text=f"{site}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-        label_advice3.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
-        label_advice3.bind("<Button-1>", lambda e: webbrowser.open(site))    # Pour créer un lien hypertext
+    
+    
+    label_advice3 = customtkinter.CTkLabel(framescroll, text=f"{list_site[0]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+    label_advice3.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
+    label_advice3.bind("<Button-1>", lambda e: webbrowser.open(list_site[0]))    # Pour créer un lien hypertext
+
+    label_advice4 = customtkinter.CTkLabel(framescroll, text=f"{list_site[1]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+    label_advice4.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
+    label_advice4.bind("<Button-1>", lambda e: webbrowser.open(list_site[1]))    # Pour créer un lien hypertext
+
+    label_advice5 = customtkinter.CTkLabel(framescroll, text=f"{list_site[2]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+    label_advice5.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
+    label_advice5.bind("<Button-1>", lambda e: webbrowser.open(list_site[2]))    # Pour créer un lien hypertext
+
+    label_advice6 = customtkinter.CTkLabel(framescroll, text=f"{list_site[3]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+    label_advice6.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
+    label_advice6.bind("<Button-1>", lambda e: webbrowser.open(list_site[3]))    # Pour créer un lien hypertext
+
+    label_advice7 = customtkinter.CTkLabel(framescroll, text=f"{list_site[4]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+    label_advice7.pack(pady=(5,10), padx=(margin_advice), anchor="nw")
+    label_advice7.bind("<Button-1>", lambda e: webbrowser.open(list_site[4]))    # Pour créer un lien hypertext
 
 # Bouton pour atterir à la page de conseils
 
