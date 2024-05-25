@@ -573,6 +573,7 @@ def prog():
                 "Perl",
                 "Rust",
                 "Ruby",
+                "Batch",
                 ]
     
     dict_prog = {
