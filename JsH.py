@@ -132,6 +132,7 @@ def active_algo():
                 "de somme",
                 "de calcul du carré d'un nombre",
                 "de calcul de moyenne",
+                "de calcul de factoriel",
                 "de conversion secondes-heure",
                 "de valeur absolue",
                 "de parité-imparité",
@@ -574,18 +575,19 @@ def prog():
                 "Rust",
                 "Ruby",
                 "Batch",
+                "ABC",
                 ]
     
     dict_prog = {
                 "1" : "Python est un langage de programmation interprété, de haut niveau, multi-paradigme et de scripts orienté objet. Il a été conçu par Guido Van Rossum dans les années 90. Python est utilisé dans la création d'algorithmes de machine learning, dans le développement d'intelligences artificielles, dans l'analyse de données à grande comme à petite échelle, etc. Sa syntaxe simple se rapprochant de l'algorithme de base le rend plus compréhensible par l'être humain et moins << prise de tête >>. Bénéficiant d'une large communauté active et d'une syntaxe simple, python est un langage idéal pour débuter en programmation et mettre en pratique toute la théorie algorithmique.\n\nSite officiel : ",
                 "2" : "Java est un langage orienté objet, multi-plateforme et de haut niveau. Lorsqu’un programmeur écrit une application Java, le code compilé (appelé bytecode) peut s’exécuter sur la plupart des systèmes d’exploitation (OS), y compris Windows, Linux et Mac OS grâce à la JVM (Java Virtual Machine). Java est utilisé dans la réalisation d'applications web, desktop, android et même de jeux. sa polyvalence fait de lui un langage incontournable à l'heure actuelle dans le monde numérique. Pour la petite histoire le logo de Java est une tasse parce qu'à l'époque les développeurs de Java ont bu beaucoup de tasses de café en travaillant sur celui-ci haha.\n\nSite officiel : ",
-                "3" : "Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur."
+                "3" : "Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur. Voici quelques compilateurs C fréquement utilisés par la communauté: Clang, GCC, Turbo C++. Son niveau bas, c'est à dire plus proche du langage machine, lui permet de mieux intéragir avec le système d'exploitation et le processeur. Le langage C est utilisé dans le développement de systèmes d'exploitations (ex: Linux), dans la programmation de systèmes embarqués (ex: Arduino) et même dans le développement de jeux vidéos. Son allocation statique de la mémoire et sa syntaxe rigoureuse font de lui un très bon choix pour apprendre les bonnes pratiques de la programmations.\n\nSite officiel : "
                 }
     
     dict_sites = {
         "1" : "https://www.python.org/",
         "2" : "https://www.java.com/fr/",
-        "C" : "https://fr.wikipedia.org/wiki/C_(langage)",
+        "3" : "https://fr.wikipedia.org/wiki/C_(langage)",
         "C++" : "https://fr.wikipedia.org/wiki/C%2B%2B",
         "C#" : "https://fr.wikipedia.org/wiki/C_Sharp",
         "D" : "https://fr.wikipedia.org/wiki/D_(langage)",
@@ -645,7 +647,7 @@ def good_advices():
     list_advice = [
         "Concentre toi en Algorithmique, c'est le pilier de la programmation !",
         "Commence par apprendre des langages de programmations pas trop chargés comme python, html et css.",
-        "Fonctionne par projets. Savoir écrire if en python ne fais pas de toi un développeur. Pour chaque langage que tu vas apprendre, utilise le de manière concrète dans un projet.",           
+        "Fonctionne par projets. Savoir écrire if en python ne fais pas de toi un développeur. Pour chaque langage que tu vas apprendre, utilise le de manière concrète dans un projet. Réalise des projets personnels qui te motivent réellement !",           
         "Tu fais de la programmation pour toi et toi seul, ce n'est pas une compétition.",
         "Progresser en programmation et en informatique en général demande beaucoup de patience et énormément de temps. Prend ton temps pour bien apprendre, ce n'est pas la course.",
         "Reste calme et patient quand tu rencontres des bugs et des problèmes lors de tes projets. C'est dans le calme qu'on trouve des solutions.",
