@@ -560,51 +560,25 @@ def prog():
                 "Prolog",
                 "Perl",
                 "Dart",
-                "C#",
-                "D",
-                "B",
-                "TypeScript",
-                "F#",
-                "Go",
-                "Rust",
-                "Swift",
-                "Kotlin",
-                "Objective-C",
-                "Julia",
-                "Scala",
-                "Clojure",
-                "Haskell",
-                "Cobol",
-                "Fortran",
-                "Lua",
-                "Rust",
-                "Ruby",
-                "Batch",
-                "ABC",
                 ]
     
+    s = "\n\nSite: "    # Variable qui servira à factoriser la string qu'il contient dans l'affichage des définitions
     dict_prog = {
-                "1" : "Python est un langage de programmation interprété, de haut niveau, multi-paradigme et de scripts orienté objet. Il a été conçu par Guido Van Rossum dans les années 90. Python est utilisé dans la création d'algorithmes de machine learning, dans le développement d'intelligences artificielles, dans l'analyse de données à grande comme à petite échelle, etc. Sa syntaxe simple se rapprochant de l'algorithme de base le rend plus compréhensible par l'être humain et moins << prise de tête >>. Bénéficiant d'une large communauté active et d'une syntaxe simple, python est un langage idéal pour débuter en programmation et mettre en pratique toute la théorie algorithmique.\n\nSite officiel : ",
-                "2" : "Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur. Voici quelques compilateurs C fréquement utilisés par la communauté: Clang, GCC, Turbo C++. Son niveau bas, c'est à dire plus proche du langage machine, lui permet de mieux intéragir avec le système d'exploitation et le processeur. Le langage C est utilisé dans le développement de systèmes d'exploitations (ex: Linux), dans la programmation de systèmes embarqués (ex: Arduino) et même dans le développement de jeux vidéos. Son allocation statique de la mémoire et sa syntaxe rigoureuse font de lui un très bon choix pour apprendre les bonnes pratiques de la programmations.\n\nSite officiel : ",
-                "3" : "Le Html (Hypertext Markup Language) n'est en réalité pas un langage de programmation mais un langage de balisage",
+                "1" : f"Python est un langage de programmation interprété, de haut niveau, multi-paradigme et de scripts orienté objet. Il a été conçu par Guido Van Rossum dans les années 90. Python est utilisé dans la création d'algorithmes de machine learning, dans le développement d'intelligences artificielles, dans l'analyse de données à grande comme à petite échelle, etc. Sa syntaxe simple se rapprochant de l'algorithme de base le rend plus compréhensible par l'être humain et moins << prise de tête >>. Bénéficiant d'une large communauté active et d'une syntaxe simple, python est un langage idéal pour débuter en programmation et mettre en pratique toute la théorie algorithmique.{s}",
+                "2" : f"Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur. Voici quelques compilateurs C fréquement utilisés par la communauté: Clang, GCC, Turbo C++. Son niveau bas, c'est à dire plus proche du langage machine, lui permet de mieux intéragir avec le système d'exploitation et le processeur. Le langage C est utilisé dans le développement de systèmes d'exploitations (ex: Linux), dans la programmation de systèmes embarqués (ex: Arduino) et même dans le développement de jeux vidéos. Son allocation statique de la mémoire et sa syntaxe rigoureuse font de lui un très bon choix pour apprendre les bonnes pratiques de la programmations.{s}",
+                "3" : f"Le Html (Hypertext Markup Language) n'est en réalité pas un langage de programmation mais un langage de balisage utilisé pour sctructurer une page web et son contenu à l'aide de balises. A noter que c'est l'un des langages de balisage les plus utilisé monde, de par sa syntaxe facile et de sa compréhension rapide par l'humain. Le Html s'impose comme un pilier du web à l'heure actuelle. Mais avec un peu de pratique tu t'en rendras bien compte, le Html seul ne permet pas de faire un site web qui se vaut aujourd'hui. Il aura donc besoin de son complémentaire, le Css.{s}",
+                "4" : f"Le Css (Cascading Style Sheets) n'est pas un langage de programmation mais un langage de feuilles de style en cascade complémentaire du html, c'est à dire que les feuilles de style peuvent être appliquées à plusieurs éléments de la même page web. Il permet de personnaliser l'apparence d'un site web en utilisant des propriétés appliquées à des classes attribuées aux éléments du html (en gros il permet de rendre le site plus beau et plus attrayant). Il est utilisé la plupart du temps dans le développement de sites web, mais peut servir à bien d'autres choses.{s}",
+                "5" : f"Java est un langage orienté objet, multi-plateforme et de haut niveau. Lorsqu’un programmeur écrit une application Java, le code compilé (appelé bytecode) peut s’exécuter sur la plupart des systèmes d’exploitation (OS), y compris Windows, Linux et Mac OS grâce à la JVM (Java Virtual Machine). Java est utilisé dans la réalisation d'applications web, desktop, android et même de jeux. sa polyvalence fait de lui un langage incontournable à l'heure actuelle dans le monde numérique. Pour la petite histoire le logo de Java est une tasse parce qu'à l'époque les développeurs de Java ont bu beaucoup de tasses de café en travaillant sur celui-ci haha.{s}",
+                "6" : f"Le C++ est un langage de programmation compilé, multi-paradigme et de bas niveau. Développé en 1983 par Bjarne Stroustrup qui voulait incrémenter le langage C (d'où le nom, C++ signifiant \"ajouter 1 à C\"). Ce langage apporte donc de nouvelles fonctionnalités par rapport au C, notamment la programmation orientée objet avec les classes, les méthodes etc et des interfaces graphiques de plus en plus poussées. En plus d'être rapide, de permettre la création de logiciels pour plusieurs platformes en même temps, le C++ bénéficie d'une importante communauté active sur internet. Il est utilisé dans le développement de logiciels systèmes (pilotes) et principalement dans le développement de jeux vidéos, à titre d'exemple : Fortnite, Fifa, Naruto Storm etc. Il est très important de préciser que le C++ est considéré comme l'un des langages les plus difficile à apprendre. Sa compréhension la plus totale demande des années d'expérience et de patience, alors accroche toi !{s}",
                 }
     
     dict_sites = {
         "1" : "https://www.python.org/",
-        "2" : "https://www.java.com/fr/",
-        "3" : "https://fr.wikipedia.org/wiki/C_(langage)",
-        "C++" : "https://fr.wikipedia.org/wiki/C%2B%2B",
-        "C#" : "https://fr.wikipedia.org/wiki/C_Sharp",
-        "D" : "https://fr.wikipedia.org/wiki/D_(langage)",
-        "B" : "https://fr.wikipedia.org/wiki/B_(langage)",
-        "PHP" : "https://fr.wikipedia.org/wiki/PHP",
-        "Javascript" : "https://fr.wikipedia.org/wiki/JavaScript",
-        "TypeScript" : "https://fr.wikipedia.org/wiki/TypeScript",
-        "Html" : "https://fr.wikipedia.org/wiki/HTML",
-        "Css" : "https://fr.wikipedia.org/wiki/CSS",
-        "F#" : "https://fr.wikipedia.org/wiki/F_Sharp",
-        "Go" : "https://fr.wikipedia.org/wiki/Go_(langage)",
-        "Rust" : "https://fr.wikipedia.org/wiki/Rust_(langage)",
+        "2" : "https://fr.wikipedia.org/wiki/C_(langage)",
+        "3" : "https://developer.mozilla.org/fr/docs/Web/HTML",
+        "4" : "https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics",
+        "5" : "https://www.java.com/fr/",
+        "6" : "https://devdocs.io/cpp-compiler-support/",
     }
 
 
@@ -624,7 +598,6 @@ def prog():
         
             buttonprog = customtkinter.CTkButton(framescroll, text=f"{list_prog[j]}", width=140, height=28, command = lambda i = j+1 : action_button(i), corner_radius = 2, font = font_btn_prog)    # Bouton des algorithmes 
             buttonprog.pack( pady = (15,15), padx = (margin, margin))
-
 
 
     for i in range(5):
@@ -655,14 +628,6 @@ def prog():
             label_prog.pack(pady = (padding_top, 0))
             
             get_prog(10, 12)
-
-
-
-
-
-
-
-
 
 
 button_prog = customtkinter.CTkButton(frame, text="Langages de programmations", height=40, corner_radius=0, command = prog, font = font_menu)
@@ -706,29 +671,15 @@ def good_advices():
         label_advice2.pack(pady=(10,10), padx=(margin_advice), anchor="nw")    # anchor="nw" pour mettre le label en haut à gauche
     
     #Les liens des plateformes pour apprendre la programmation
-    list_site = ["https://openclassrooms.com/fr/", "https://www.udemy.com/", "https://www.w3schools.com/", "https://www.alphorm.com/", "https://em-coder.netlify.app/"]
+    list_site = ["https://openclassrooms.com/fr/", "https://www.udemy.com/", "https://www.w3schools.com/", "https://www.alphorm.com/", "https://em-coder.netlify.app/", "https://zestedesavoir.com/bibliotheque/informatique/programmation-et-algorithmique/"]
     
+    def link(url):    # Fonction pour l'affichage d'un lien fonctionnel
+        label_advice = customtkinter.CTkLabel(framescroll, text=f"{url}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
+        label_advice.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
+        label_advice.bind("<Button-1>", lambda e: webbrowser.open(url))    # Pour créer un lien hypertext
     
-    
-    label_advice3 = customtkinter.CTkLabel(framescroll, text=f"{list_site[0]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-    label_advice3.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
-    label_advice3.bind("<Button-1>", lambda e: webbrowser.open(list_site[0]))    # Pour créer un lien hypertext
-
-    label_advice4 = customtkinter.CTkLabel(framescroll, text=f"{list_site[1]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-    label_advice4.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
-    label_advice4.bind("<Button-1>", lambda e: webbrowser.open(list_site[1]))    # Pour créer un lien hypertext
-
-    label_advice5 = customtkinter.CTkLabel(framescroll, text=f"{list_site[2]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-    label_advice5.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
-    label_advice5.bind("<Button-1>", lambda e: webbrowser.open(list_site[2]))    # Pour créer un lien hypertext
-
-    label_advice6 = customtkinter.CTkLabel(framescroll, text=f"{list_site[3]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-    label_advice6.pack(pady=(5,5), padx=(margin_advice), anchor="nw")
-    label_advice6.bind("<Button-1>", lambda e: webbrowser.open(list_site[3]))    # Pour créer un lien hypertext
-
-    label_advice7 = customtkinter.CTkLabel(framescroll, text=f"{list_site[4]}", justify = "left", cursor = "hand2",text_color = "#0078D4", font = ("Times", 20, "underline"))
-    label_advice7.pack(pady=(5,10), padx=(margin_advice), anchor="nw")
-    label_advice7.bind("<Button-1>", lambda e: webbrowser.open(list_site[4]))    # Pour créer un lien hypertext
+    for item in list_site:
+        link(item)
 
 # Bouton pour atterir à la page de conseils
 
