@@ -115,11 +115,11 @@ label.pack(pady = (margin_top, 0))
 def active_algo():
     clear2(framebody)
     clear(framebody)    #Fonction qui efface tous les enfants de la frame frambody
-    
+
     framescroll= customtkinter.CTkScrollableFrame(framebody,width= width_frame, height= height,corner_radius=0)  # Frame scrollante pour l'affichage des algo
     framescroll.pack(expand="True")
     
-    label_algo = customtkinter.CTkLabel(framescroll, text='Voici les algorithmes que je peux te proposer :', font = font_btn_algo)  # Phrase pour présenter les algo
+    label_algo = customtkinter.CTkLabel(framescroll, text="Voici les exercices d'algorithmes corrigés que je peux te proposer :", font = font_btn_algo)  # Phrase pour présenter les algo
     label_algo.pack(pady=(30, 12))
     
     margin_algo = (app.winfo_screenwidth()*2)/100 # Marge pour les algo
@@ -539,25 +539,31 @@ def prog():
     
     margin_label_prog = (app.winfo_screenwidth()*2)/100
     
-    i = 1    # index de la liste
+    padding_top = app.winfo_screenheight()*3/100    
     
-    column = 1    # Initialisation des colonnes
+    index_bouton = 1    # index de la liste
     
-    row = 1    # Initialisation des lignes
+    
+    framescroll= customtkinter.CTkScrollableFrame(framebody,width= width_frame, height= height,corner_radius=0)  # Frame scrollante pour l'affichage des langages de programmation
+    framescroll.pack(expand="True")
     
     list_prog = [
                 "Python",
-                "Java",
                 "C",
+                "Html",
+                "Css",
+                "Java",
                 "C++", 
+                "Javascript",
+                "Php",
+                "Sql",
+                "Prolog",
+                "Perl",
+                "Dart",
                 "C#",
                 "D",
                 "B",
-                "PHP",
-                "Javascript",
                 "TypeScript",
-                "Html",
-                "Css",
                 "F#",
                 "Go",
                 "Rust",
@@ -571,7 +577,6 @@ def prog():
                 "Cobol",
                 "Fortran",
                 "Lua",
-                "Perl",
                 "Rust",
                 "Ruby",
                 "Batch",
@@ -580,8 +585,8 @@ def prog():
     
     dict_prog = {
                 "1" : "Python est un langage de programmation interprété, de haut niveau, multi-paradigme et de scripts orienté objet. Il a été conçu par Guido Van Rossum dans les années 90. Python est utilisé dans la création d'algorithmes de machine learning, dans le développement d'intelligences artificielles, dans l'analyse de données à grande comme à petite échelle, etc. Sa syntaxe simple se rapprochant de l'algorithme de base le rend plus compréhensible par l'être humain et moins << prise de tête >>. Bénéficiant d'une large communauté active et d'une syntaxe simple, python est un langage idéal pour débuter en programmation et mettre en pratique toute la théorie algorithmique.\n\nSite officiel : ",
-                "2" : "Java est un langage orienté objet, multi-plateforme et de haut niveau. Lorsqu’un programmeur écrit une application Java, le code compilé (appelé bytecode) peut s’exécuter sur la plupart des systèmes d’exploitation (OS), y compris Windows, Linux et Mac OS grâce à la JVM (Java Virtual Machine). Java est utilisé dans la réalisation d'applications web, desktop, android et même de jeux. sa polyvalence fait de lui un langage incontournable à l'heure actuelle dans le monde numérique. Pour la petite histoire le logo de Java est une tasse parce qu'à l'époque les développeurs de Java ont bu beaucoup de tasses de café en travaillant sur celui-ci haha.\n\nSite officiel : ",
-                "3" : "Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur. Voici quelques compilateurs C fréquement utilisés par la communauté: Clang, GCC, Turbo C++. Son niveau bas, c'est à dire plus proche du langage machine, lui permet de mieux intéragir avec le système d'exploitation et le processeur. Le langage C est utilisé dans le développement de systèmes d'exploitations (ex: Linux), dans la programmation de systèmes embarqués (ex: Arduino) et même dans le développement de jeux vidéos. Son allocation statique de la mémoire et sa syntaxe rigoureuse font de lui un très bon choix pour apprendre les bonnes pratiques de la programmations.\n\nSite officiel : "
+                "2" : "Le langage C est un langage de programmation compilé, procédural et de bas niveau. Il a été créé en 1972 par les développeurs et scientifiques en informatique Dennis Ritchie et Ken Thompson. Etant un langage compilé, le C doit être traduit à l'aide d'un compilateur en langage machine avant d'être exécuté par le processeur. Voici quelques compilateurs C fréquement utilisés par la communauté: Clang, GCC, Turbo C++. Son niveau bas, c'est à dire plus proche du langage machine, lui permet de mieux intéragir avec le système d'exploitation et le processeur. Le langage C est utilisé dans le développement de systèmes d'exploitations (ex: Linux), dans la programmation de systèmes embarqués (ex: Arduino) et même dans le développement de jeux vidéos. Son allocation statique de la mémoire et sa syntaxe rigoureuse font de lui un très bon choix pour apprendre les bonnes pratiques de la programmations.\n\nSite officiel : ",
+                "3" : "Le Html (Hypertext Markup Language) n'est en réalité pas un langage de programmation mais un langage de balisage",
                 }
     
     dict_sites = {
@@ -601,33 +606,62 @@ def prog():
         "Go" : "https://fr.wikipedia.org/wiki/Go_(langage)",
         "Rust" : "https://fr.wikipedia.org/wiki/Rust_(langage)",
     }
-    for item in list_prog:   # Boucle pour afficher les algo
-        
-        def action_button(ite):    # Fonction d'affichage des LP ciblés lors du click d'un bouton LP
+
+
+    def get_prog(first_language, last_language):
+        for j in range(first_language, last_language):
             
-            clear2(framebody)
+            def action_button(ite):    # Fonction d'affichage des LP ciblés lors du click d'un bouton LP
             
-            label_prog = customtkinter.CTkLabel(framebody, text=f"{dict_prog[str(ite)]}", justify="left", wraplength = (app.winfo_screenwidth()*75)/100, font = font_label_prog) # wraplength pour la taille maximale d'unne ligne d'un label
-            label_prog.pack(pady=(10,10), padx=(margin_label_prog, 0), anchor="nw")    # anchor="nw" pour mettre le label en haut à gauche
+                clear(framebody)
             
-            label_site = customtkinter.CTkLabel(framebody, text=f"{dict_sites[str(ite)]}", justify = "left", cursor = "hand2", text_color = "#0078D4", font = ("Times", 20, "underline"))
-            label_site.pack(pady=(5,5), padx=(margin_label_prog, 0), anchor="nw")
-            label_site.bind("<Button-1>", lambda e: webbrowser.open(dict_sites[str(ite)]))    # Pour créer un lien hypertext
-        
-        if column == 8:
+                label_prog = customtkinter.CTkLabel(framebody, text=f"{dict_prog[str(ite)]}", justify="left", wraplength = (app.winfo_screenwidth()*75)/100, font = font_label_prog) # wraplength pour la taille maximale d'une ligne d'un label
+                label_prog.pack(pady=(10,10), padx=(margin_label_prog, 0), anchor="nw")    # anchor="nw" pour mettre le label en haut à gauche
             
-            row += 1 # Incrémentation du nombre de lignes
+                label_site = customtkinter.CTkLabel(framebody, text=f"{dict_sites[str(ite)]}", justify = "left", cursor = "hand2", text_color = "#0078D4", font = ("Times", 20, "underline"))
+                label_site.pack(pady=(5,5), padx=(margin_label_prog, 0), anchor="nw")
+                label_site.bind("<Button-1>", lambda e: webbrowser.open(dict_sites[str(ite)]))    # Pour créer un lien hypertext
+        
+            buttonprog = customtkinter.CTkButton(framescroll, text=f"{list_prog[j]}", width=140, height=28, command = lambda i = j+1 : action_button(i), corner_radius = 2, font = font_btn_prog)    # Bouton des algorithmes 
+            buttonprog.pack( pady = (15,15), padx = (margin, margin))
+
+
+
+    for i in range(5):
+
+        if i == 0:
             
-            column = 1    # Réinitialisation du nombre de colonnes#
+            label_prog = customtkinter.CTkLabel(framescroll, text = "La présentation des langages de programmation est entièrement basée sur le programme universitaire du département informatique de l'institut universitaire d'Abidjan (IUA)",wraplength = (app.winfo_screenwidth()*75)/100, font= font_label_prog)
+            label_prog.pack(pady = (padding_top, 0))
+
+        elif i == 1:
+            
+            label_prog = customtkinter.CTkLabel(framescroll, text = "License 1 :",wraplength = (app.winfo_screenwidth()*75)/100, font= font_label_prog)
+            label_prog.pack(pady = (padding_top, 0))
+            
+            get_prog(0, 4)
+
+        elif i == 2:
+            
+            label_prog = customtkinter.CTkLabel(framescroll, text = "License 2 :",wraplength = (app.winfo_screenwidth()*75)/100, font= font_label_prog)
+            label_prog.pack(pady = (padding_top, 0))
+            
+            get_prog(4, 10)
+
         
-        buttonprog = customtkinter.CTkButton(framebody, text=f"{item}", width=140, height=28, command = lambda i = i : action_button(i), corner_radius = 2, font = font_btn_prog)    # Bouton des algorithmes 
-        buttonprog.grid(column = column, row = row, pady = (30,0), padx = (margin, margin))
-        
-        framebody.columnconfigure(column, weight=1)    # Permet d'attribuer l'espace non utilisé équitablement entre chaque colonne
-        
-        column += 1    # Incémentation d'un compteur pour les colonnes
-        
-        i += 1    # Incémentation d'un compteur pour les numéros des algorithmes
+        elif i == 3:
+            
+            label_prog = customtkinter.CTkLabel(framescroll, text = "License 3 :",wraplength = (app.winfo_screenwidth()*75)/100, font= font_label_prog)
+            label_prog.pack(pady = (padding_top, 0))
+            
+            get_prog(10, 12)
+
+
+
+
+
+
+
 
 
 
